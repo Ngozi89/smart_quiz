@@ -29,6 +29,8 @@ body {
     color: white;
     margin-top: 110px;
     margin-left: 20px;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .heading, .heading2 {
@@ -50,6 +52,53 @@ body {
 
 .start-btn:hover {
     background: #252525;
+    color: #fff;
+}
+
+.game_info_list {
+    position: absolute;
+    width: 95%;
+    height: 780px;
+    background: #d30707;
+    color: white;
+    margin-top: 510px;
+    margin-left: 195px;
+    /* opacity: 0;
+    pointer-events: none;*/
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.game_info_list img {
+    width: 30vh;
+    margin-left: 56px;
+    margin-top: 5px;
+}
+
+.game_info {
+    padding: 2px;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 10%;
+}
+
+.game_info_list .buttons {
+    margin-left: 20px;
+    border-radius: 5px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+
+}
+
+/* Hover button */
+.buttons button.exit:hover {
+    background: #d30707;
+    color: #fff;
+}
+
+.buttons button.continue:hover {
+    background: #08ac16;
     color: #fff;
 }
 
@@ -120,5 +169,28 @@ body {
         margin-left: 410px;
         width: 20%;
         height: 40px;
+    }
+
+    .game_info_list {
+        width: 65%;
+        height: 670px;
+        margin-top: 459px;
+        margin-left: 780px;
+    }
+    
+    .game_info_list img {
+        width: 30vh;
+        margin-left: 410px;
+        margin-top: 5px;
+    }
+    
+    .game_info {
+        font-size: 20px;
+        margin: 30px;
+        padding: 1px;
+    }
+    
+    .game_info_list .buttons {
+        margin-left: 80px;
     }
 }
