@@ -1,0 +1,19 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+body {
+    min-height: 100vh;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    font-family: "Lota", sans-serif;
+    overflow-x: hidden;
+}
+
+.brain {
+    color: #d30707;
+}
+
+.deco {
+    color: #252525;
+}
