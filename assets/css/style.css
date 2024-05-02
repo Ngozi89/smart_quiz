@@ -228,6 +228,14 @@ body {
     font-weight: 900;
 }
 
+.option_list .option.correct {
+    color: #1b7004;
+}
+
+.option_list .option.incorrect {
+    color: #d30707;
+}
+
 /* Style Quiz Footer */
 .quiz_box section {
     height: 50px;

@@ -1,6 +1,6 @@
 let questions = [
     {
-        numb: 1,
+        number: 1,
         question: "What country has the highest life expectancy?",
         answer: "Hong Kong",
         options: [
@@ -11,7 +11,7 @@ let questions = [
         ]
     },
     {
-        numb: 2,
+        number: 2,
         question: "Which langauge has the more native speakers?",
         answer: "Spanish",
         options: [
@@ -22,7 +22,7 @@ let questions = [
         ]
     },
     {
-        numb: 3,
+        number: 3,
         question: "What disease commonly spread on pirate ships?",
         answer: "Scurvy",
         options: [
@@ -33,7 +33,7 @@ let questions = [
         ]
     },
     {
-        numb: 4,
+        number: 4,
         question: "What year was the United Nations established?",
         answer: "1945",
         options: [
@@ -44,7 +44,7 @@ let questions = [
         ]
     },
     {
-        numb: 5,
+        number: 5,
         question: "How many minutes are in a full week?",
         answer: "10,080",
         options: [
@@ -55,7 +55,7 @@ let questions = [
         ]
     },
     {
-        numb: 6,
+        number: 6,
         question: "Aureolin is a shade of what color?",
         answer: "Yellow",
         options: [
@@ -66,7 +66,7 @@ let questions = [
         ]
     },
     {
-        numb: 7,
+        number: 7,
         question: "Which planet has the most moons?",
         answer: "Saturn",
         options: [
@@ -77,7 +77,7 @@ let questions = [
         ]
     },
     {
-        numb: 8,
+        number: 8,
         question: "What country has won the most World Cups?",
         answer: "Saturn",
         options: [
@@ -88,7 +88,7 @@ let questions = [
         ]
     },
     {
-        numb: 9,
+        number: 9,
         question: "In what country was Elon Musk born?",
         answer: "South Africa",
         options: [
@@ -99,7 +99,7 @@ let questions = [
         ]
     },
     {
-        numb: 10,
+        number: 10,
         question: "Where is the strongest human muscle located?",
         answer: "Jaw",
         options: [
@@ -110,7 +110,7 @@ let questions = [
         ]
     },
     {
-        numb: 11,
+        number: 11,
         question: "How many hearts does an octopus have?",
         answer: "Jaw",
         options: [
@@ -121,7 +121,7 @@ let questions = [
         ]
     },
     {
-        numb: 12,
+        number: 12,
         question: "What planet is closest to the sun?",
         answer: "Mercury",
         options: [
@@ -132,7 +132,7 @@ let questions = [
         ]
     },
     {
-        numb: 13,
+        number: 13,
         question: "What phone company produced the 3310?",
         answer: "Nokia",
         options: [
@@ -143,7 +143,7 @@ let questions = [
         ]
     },
     {
-        numb: 14,
+        number: 14,
         question: "What is the tallest type of tree?",
         answer: "Redwoods",
         options: [
@@ -154,7 +154,7 @@ let questions = [
         ]
     },
     {
-        numb: 15,
+        number: 15,
         question: "What colors is the flag of the United Nations?",
         answer: "Blue and White",
         options: [
@@ -165,7 +165,7 @@ let questions = [
         ]
     },
     {
-        numb: 16,
+        number: 16,
         question: "What country drinks the most coffee?",
         answer: "Finland",
         options: [
@@ -176,7 +176,7 @@ let questions = [
         ]
     },
     {
-        numb: 17,
+        number: 17,
         question: "Where did sushi originate?",
         answer: "China",
         options: [
@@ -187,7 +187,7 @@ let questions = [
         ]
     },
     {
-        numb: 18,
+        number: 18,
         question: "How many dots appear on a pair of dice?",
         answer: "42",
         options: [
@@ -198,7 +198,7 @@ let questions = [
         ]
     },
     {
-        numb: 19,
+        number: 19,
         question: "How many bones do we have in an ear?",
         answer: "3",
         options: [
@@ -209,7 +209,7 @@ let questions = [
         ]
     },
     {
-        numb: 20,
+        number: 20,
         question: "What city is known as The Eternal City?",
         answer: "Rome",
         options: [
