@@ -210,7 +210,7 @@ let questions = [
     },
     {
         numb: 20,
-        question: "What city is known as The Eternal City"?
+        question: "What city is known as The Eternal City?",
         answer: "Rome",
         options: [
             "New-York",
@@ -218,5 +218,5 @@ let questions = [
             "Rome",
             "Tarento"
         ]
-    },
-]
+    }
+];

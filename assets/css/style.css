@@ -29,6 +29,7 @@ body {
     color: white;
     margin-top: 40px;
     margin-left: 25px;
+    cursor: pointer;
 }
 
 .heading, .heading2 {
@@ -96,6 +97,7 @@ body {
     margin-top: 10px;
     outline: none;
     cursor: pointer;
+    transition: all 0.3s ease;
 
 }
 
