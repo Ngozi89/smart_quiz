@@ -55,6 +55,9 @@ function showQuestions(index){
     }
 }
 
+let tickIcon = '<div class="icon tick"><i class="fas fa-check"></i></div>';
+let crossIcon = '<div class="icon cross"><i class="fas fa-times"></i></div>';
+
 function optionSelected(answer) {
     let userAnswer = answer.textContent;
     let correctAnswer = questions[que_count].answer;
@@ -62,14 +65,17 @@ function optionSelected(answer) {
     if (userAnswer == correctAnswer) {
         answer.classList.add("correct");
         console.log("Your answer is correct");
+        answer.insertAdjacentHTML("beforeend", tickIcon);
     }else{
         answer.classList.add("incorrect");
         console.log("Incorrect answer");
+        answer.insertAdjacentHTML("beforeend", crossIcon);
 
          //Choose correct answer
         for (let i = 0; i < allOptions; i++) {
             if (option_list.children[i].textContent == correctAnswer) {
                 option_list.children[i].setAttribute("class", "option correct");
+                option_list.children[i].insertAdjacentHTML("beforeend", tickIcon);
             }
     }
 }

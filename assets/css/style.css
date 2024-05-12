@@ -290,7 +290,6 @@ section .next_btn:hover {
     .start_game {
         width: 70%;
         height: 580px;
-        background: #d30707;
         color: white;
         margin-top: 110px;
         margin-left: 120px;
