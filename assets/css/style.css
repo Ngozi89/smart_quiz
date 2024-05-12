@@ -236,6 +236,10 @@ body {
     color: #d30707;
 }
 
+.option_list .option.disabled {
+    pointer-events: none;
+}
+
 /* Style Quiz Footer */
 .quiz_box section {
     height: 50px;

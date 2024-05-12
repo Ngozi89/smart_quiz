@@ -5,6 +5,8 @@ let exit_btn = game_info_list.querySelector(".buttons .exit");
 let continue_btn = game_info_list.querySelector(".buttons .continue");
 let quiz_box = document.querySelector(".quiz_box");
 
+const option_list = document.querySelector(".option_list");
+
 // Activate start game button
 start_game.onclick = ()=>{
     game_info_list.classList.add("activeInfo");
@@ -40,7 +42,6 @@ next_btn.onclick = ()=>{
 // Display Questions and options function
 function showQuestions(index){
     const que_text = document.querySelector(".que_text");
-    const option_list = document.querySelector(".option_list");
     let que_tag = '<span>'+ questions[index].number + ". " + questions[index].question +'</span>';
     let option_tag = '<div class="option">'+ questions[index].options[0] +'<span></span></div>'
                      + '<div class="option">'+ questions[index].options[1] +'<span></span></div>'
@@ -57,13 +58,26 @@ function showQuestions(index){
 function optionSelected(answer) {
     let userAnswer = answer.textContent;
     let correctAnswer = questions[que_count].answer;
+    let allOptions = option_list.children.length;
     if (userAnswer == correctAnswer) {
         answer.classList.add("correct");
         console.log("Your answer is correct");
     }else{
         answer.classList.add("incorrect");
         console.log("Incorrect answer");
+
+         //Choose correct answer
+        for (let i = 0; i < allOptions; i++) {
+            if (option_list.children[i].textContent == correctAnswer) {
+                option_list.children[i].setAttribute("class", "option correct");
+            }
     }
+}
+
+//Disable other options when play chooses answer
+    for (let i = 0; i < allOptions; i++){
+        option_list.children[i].classList.add("disabled");
+}
 }
 
 function queCounter(index){
