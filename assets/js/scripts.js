@@ -4,6 +4,7 @@ let game_info_list = document.querySelector(".game_info_list");
 let exit_btn = game_info_list.querySelector(".buttons .exit");
 let continue_btn = game_info_list.querySelector(".buttons .continue");
 let quiz_box = document.querySelector(".quiz_box");
+let timmer = quiz_box.querySelector(".timer .timer_sec");
 
 const option_list = document.querySelector(".option_list");
 
@@ -21,10 +22,13 @@ continue_btn.onclick = ()=> {
     quiz_box.classList.add("activeQuiz");
     showQuestions(0);
     queCounter(1);
+    startTime(10);
 }
 
 let que_count = 0;
 let que_number = 1;
+let timming;
+let timeValue = 10;
 
 const next_btn = quiz_box.querySelector(".next_btn")
 
@@ -34,6 +38,8 @@ next_btn.onclick = ()=>{
         que_number++;
         showQuestions(que_count);
         queCounter(que_number);
+        clearInterval(timming)
+        startTime(timeValue);
     }else{
         console.log("You have completed the questions")
     }
@@ -59,6 +65,7 @@ let tickIcon = '<div class="icon tick"><i class="fas fa-check"></i></div>';
 let crossIcon = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 function optionSelected(answer) {
+    clearInterval(timming);
     let userAnswer = answer.textContent;
     let correctAnswer = questions[que_count].answer;
     let allOptions = option_list.children.length;
@@ -84,6 +91,14 @@ function optionSelected(answer) {
     for (let i = 0; i < allOptions; i++){
         option_list.children[i].classList.add("disabled");
 }
+}
+
+function startTime(time){
+    timming = setInterval(timer, 1000);
+    function timer(){
+        timmer.textContent = time;
+        time--;
+    }
 }
 
 function queCounter(index){
