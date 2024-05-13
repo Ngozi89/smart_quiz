@@ -5,6 +5,7 @@ let exit_btn = game_info_list.querySelector(".buttons .exit");
 let continue_btn = game_info_list.querySelector(".buttons .continue");
 let quiz_box = document.querySelector(".quiz_box");
 let timmer = quiz_box.querySelector(".timer .timer_sec");
+let timeLine = quiz_box.querySelector("timer .timer_line");
 
 const option_list = document.querySelector(".option_list");
 
@@ -98,6 +99,14 @@ function startTime(time){
     function timer(){
         timmer.textContent = time;
         time--;
+        if (time < 9) {
+            let addZero = timmer.textContent;
+            timmer.textContent = "0" + addZero;
+        }
+        if (time < 0){
+            clearInterval(counter);
+            timmer.textContent = "00";
+        }
     }
 }
 

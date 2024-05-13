@@ -128,7 +128,7 @@ body {
 
 .quiz_box header {
     position: relative;
-    z-index: 99;
+    z-index: 2;
     width: 90%;
     height: 70px;
     padding: 10px;
@@ -138,7 +138,7 @@ body {
     background: rgb(2, 80, 8);
     align-items: center;
     justify-content: space-between;
-    border-radius: 3px;
+    border-radius: 5px 5px 0 0;
     box-shadow: 0px 3px 5px 1px rgb(0, 0, 0, 0.1);
     border: 1px solid #fff;
 }
@@ -178,6 +178,16 @@ body {
     width: 45px;
     height: 30px;
     border-radius: 3px;
+}
+
+/* Time line */
+.quiz_box header .time_line {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 8px;
+    width: 50%;
+    background: #000;
 }
 
 /* End Time line */
