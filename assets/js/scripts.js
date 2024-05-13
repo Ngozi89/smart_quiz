@@ -5,7 +5,7 @@ let exit_btn = game_info_list.querySelector(".buttons .exit");
 let continue_btn = game_info_list.querySelector(".buttons .continue");
 let quiz_box = document.querySelector(".quiz_box");
 let timmer = quiz_box.querySelector(".timer .timer_sec");
-let timeLine = quiz_box.querySelector("timer .timer_line");
+let timeLine = quiz_box.querySelector("header .timer_line");
 
 const option_list = document.querySelector(".option_list");
 
@@ -24,12 +24,15 @@ continue_btn.onclick = ()=> {
     showQuestions(0);
     queCounter(1);
     startTime(10);
+    startTimeLine(0);
 }
 
 let que_count = 0;
 let que_number = 1;
 let timming;
+let timmingLine;
 let timeValue = 10;
+let widthValue = 0;
 
 const next_btn = quiz_box.querySelector(".next_btn")
 
@@ -39,8 +42,10 @@ next_btn.onclick = ()=>{
         que_number++;
         showQuestions(que_count);
         queCounter(que_number);
-        clearInterval(timming)
+        clearInterval(timming);
         startTime(timeValue);
+        clearInterval(timmingLine);
+        startTimeLine(widthValue);
     }else{
         console.log("You have completed the questions")
     }
@@ -67,6 +72,7 @@ let crossIcon = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 function optionSelected(answer) {
     clearInterval(timming);
+    clearInterval(timmingLine);
     let userAnswer = answer.textContent;
     let correctAnswer = questions[que_count].answer;
     let allOptions = option_list.children.length;
@@ -104,11 +110,25 @@ function startTime(time){
             timmer.textContent = "0" + addZero;
         }
         if (time < 0){
-            clearInterval(counter);
+            clearInterval(timming);
             timmer.textContent = "00";
         }
     }
 }
+
+
+function startTimeLine(time){
+    timmingLine = setInterval(line, 29);
+    function line(){
+        time += 1;
+        timeLine.style.width = time + "px";
+        if (time > 549) {
+            clearInterval(timmingLine);
+        }
+    }
+}
+
+
 
 function queCounter(index){
     const bottom_ques_counter = quiz_box.querySelector(".total-question")
