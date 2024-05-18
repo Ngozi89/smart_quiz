@@ -295,6 +295,82 @@ section .next_btn:hover {
     background: #d30707;
 }
 
+
+/* Style quiz result area */
+.result_box {
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    width: 250px;
+    height: 250px;
+    background: rgb(238, 6, 6);
+    color: #fff;
+    display: flex;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.result_box .result_icon {
+    font-size: 90px;
+    color: goldenrod;
+}
+
+.result_box .complete_quiz {
+    font-size: 120%;
+    font-weight: 600;
+}
+
+.result_box .score_text span {
+    display: flex;
+    font-size: 110%;
+    font-weight: 400;
+}
+
+.score_text span p {
+    font-weight: 700;
+    padding: 0 5px;
+}
+
+.result_box .buttons {
+    display: flex;
+    margin: 20px 0;
+}
+
+.result_box .buttons button {
+    font-weight: 600;
+    height: 30px;
+    margin: 0 10px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.result_box .buttons .continue {
+    background: #000;
+    font-weight: 800;
+    font-size: 80%;
+}
+
+.buttons .continue:hover {
+    background: #fff;
+}
+
+.result_box .buttons .exit {
+    font-size: 80%;
+}
+
+.buttons .exit:hover {
+    background: #000;
+}
+
 /* Media query for tablets and larger (750 px and up) */
 @media screen and (min-width: 750px) {
     .start_game {
@@ -318,6 +394,23 @@ section .next_btn:hover {
     
     .start-btn {
         margin-left: 220px;
+    }
+
+    .result_box {
+        width: 60%;
+        height: 300px;
+        left: 50%;
+        top: 50%;
+    }
+
+    .result_box .complete_quiz {
+        font-size: 150%;
+    }
+
+    .result_box .buttons button {
+        width: 60%;
+        height: 65px;
+        font-size: 120%;
     }
 }
 
@@ -422,5 +515,18 @@ section .next_btn:hover {
         height: 50px;
         margin-right: 120px;
         margin-bottom: 430px;
+    }
+
+    .result_box {
+        top: 60%;
+        left: 49%;
+        width: 30%;
+        height: 320px;
+
+    }
+
+    .result_box .buttons button {
+        margin-top: 70px;
+        height: 40px;
     }
 }
