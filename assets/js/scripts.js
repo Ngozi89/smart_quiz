@@ -46,6 +46,7 @@ next_btn.onclick = ()=>{
         startTime(timeValue);
         clearInterval(timmingLine);
         startTimeLine(widthValue);
+        next_btn.style.display =  "none";
     }else{
         console.log("You have completed the questions")
     }
@@ -97,7 +98,8 @@ function optionSelected(answer) {
 //Disable other options when play chooses answer
     for (let i = 0; i < allOptions; i++){
         option_list.children[i].classList.add("disabled");
-}
+    }
+    next_btn.style.display =  "block";
 }
 
 function startTime(time){
@@ -118,8 +120,8 @@ function startTime(time){
 
 
 function startTimeLine(time){
-    timmingLine = setInterval(line, 29);
-    function line(){
+    timmingLine = setInterval(timer, 29);
+    function timer(){
         time += 1;
         timeLine.style.width = time + "px";
         if (time > 549) {
