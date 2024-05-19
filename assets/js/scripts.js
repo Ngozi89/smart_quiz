@@ -33,8 +33,12 @@ let timming;
 let timmingLine;
 let timeValue = 10;
 let widthValue = 0;
+let playerScore = 0;
 
-const next_btn = quiz_box.querySelector(".next_btn")
+const next_btn = quiz_box.querySelector(".next_btn");
+const result_box = document.querySelector(".result_box");
+const restart_quiz = result_box.querySelector(".buttons .continue");
+const quit_quiz = result_box.querySelector(".buttons .exit");
 
 next_btn.onclick = ()=>{
     if (que_count < questions.length - 1){
@@ -48,7 +52,8 @@ next_btn.onclick = ()=>{
         startTimeLine(widthValue);
         next_btn.style.display =  "none";
     }else{
-        console.log("You have completed the questions")
+        console.log("You have completed the quiz");
+        showResultBox();
     }
 }
 
@@ -78,6 +83,8 @@ function optionSelected(answer) {
     let correctAnswer = questions[que_count].answer;
     let allOptions = option_list.children.length;
     if (userAnswer == correctAnswer) {
+        playerScore += 1;
+        console.log(playerScore);
         answer.classList.add("correct");
         console.log("Your answer is correct");
         answer.insertAdjacentHTML("beforeend", tickIcon);
@@ -102,6 +109,26 @@ function optionSelected(answer) {
     next_btn.style.display =  "block";
 }
 
+function showResultBox(){
+    start_game.classList.remove("activeInfo");
+    game_info_list.classList.remove("activeInfo"); //Hide quiz info box
+    quiz_box.classList.remove("activeQuiz"); //Hide the quiz box
+    result_box.classList.add("activeResult"); //Display Quiz result-box
+    const showScore = result_box.querySelector(".score_text");
+    if(playerScore > 3){
+        let playerTag = '<span>and congrat! You scored <p>'+ playerScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        showScore.innerHTML = playerTag;
+    }
+    else if(playerScore > 1){
+        let playerTag = '<span>and nice, You scored <p>'+ playerScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        showScore.innerHTML = playerTag;
+    }
+    else{
+        let playerTag = '<span>and you scored <p>'+ playerScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        showScore.innerHTML = playerTag;
+    }
+}
+
 function startTime(time){
     timming = setInterval(timer, 1000);
     function timer(){
@@ -124,7 +151,7 @@ function startTimeLine(time){
     function timer(){
         time += 1;
         timeLine.style.width = time + "px";
-        if (time > 549) {
+        if (time < 549) {
             clearInterval(timmingLine);
         }
     }

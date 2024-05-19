@@ -44,7 +44,8 @@ body {
 }
 
 .game_info_list.activeInfo,
-.quiz_box.activeQuiz {
+.quiz_box.activeQuiz,
+.result_box.activeResult {
     z-index: 5;
     opacity: 1;
     pointer-events: auto;
@@ -310,6 +311,8 @@ section .next_btn:hover {
     text-align: center;
     align-items: center;
     flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
     justify-content: space-between;
     transform: translate(-50%, -50%);
     transition: all 0.3s ease;

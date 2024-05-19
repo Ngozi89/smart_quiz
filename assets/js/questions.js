@@ -79,7 +79,7 @@ let questions = [
     {
         number: 8,
         question: "What country has won the most World Cups?",
-        answer: "Saturn",
+        answer: "Brazil",
         options: [
             "Brazil",
             "Germany",
@@ -112,7 +112,7 @@ let questions = [
     {
         number: 11,
         question: "How many hearts does an octopus have?",
-        answer: "Jaw",
+        answer: "3",
         options: [
             "4",
             "2",
