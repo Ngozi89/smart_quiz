@@ -40,6 +40,27 @@ const result_box = document.querySelector(".result_box");
 const restart_quiz = result_box.querySelector(".buttons .continue");
 const quit_quiz = result_box.querySelector(".buttons .exit");
 
+restart_quiz.onclick = ()=>{
+    quiz_box.classList.add("activeQuiz");
+    result_box.classList.remove("activeResult");
+    let que_count = 0;
+    let que_number = 1;
+    let timeValue = 10;
+    let widthValue = 0;
+    let playerScore = 0;
+    showQuestions(que_count);
+    queCounter(que_number);
+    clearInterval(timming);
+    startTime(timeValue);
+    clearInterval(timmingLine);
+    startTimeLine(widthValue);
+    next_btn.style.display = "none";
+}
+
+quit_quiz.onclick = ()=>{
+    window.location.reload();
+}
+
 next_btn.onclick = ()=>{
     if (que_count < questions.length - 1){
         que_count++;
@@ -50,7 +71,7 @@ next_btn.onclick = ()=>{
         startTime(timeValue);
         clearInterval(timmingLine);
         startTimeLine(widthValue);
-        next_btn.style.display =  "none";
+        next_btn.style.display = "none";
     }else{
         console.log("You have completed the quiz");
         showResultBox();
