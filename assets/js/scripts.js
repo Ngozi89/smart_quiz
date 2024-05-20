@@ -124,10 +124,10 @@ function optionSelected(answer) {
 }
 
 //Disable other options when play chooses answer
-    for (let i = 0; i < allOptions; i++){
+    for (let i = 0; i < allOptions; i++) {
         option_list.children[i].classList.add("disabled");
     }
-    next_btn.style.display =  "block";
+    next_btn.style.display = "block";
 }
 
 function showResultBox(){
@@ -162,10 +162,23 @@ function startTime(time){
         if (time < 0){
             clearInterval(timming);
             timmer.textContent = "00";
+
+            let correctAnswer = questions[que_count].answer;
+            let allOptions = option_list.children.length;
+
+            for (let i = 0; i < allOptions; i++) {
+                if (option_list.children[i].textContent == correctAnswer) {
+                    option_list.children[i].setAttribute("class", "option correct");
+                    option_list.children[i].insertAdjacentHTML("beforeend", tickIcon);
+                }
+            }
+            for (let i = 0; i < allOptions; i++) {
+                option_list.children[i].classList.add("disabled");
+            }
+            next_btn.style.display = "block";
         }
     }
 }
-
 
 function startTimeLine(time){
     timmingLine = setInterval(timer, 29);
@@ -177,8 +190,6 @@ function startTimeLine(time){
         }
     }
 }
-
-
 
 function queCounter(index){
     const bottom_ques_counter = quiz_box.querySelector(".total-question")
