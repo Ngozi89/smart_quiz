@@ -6,6 +6,7 @@ let continue_btn = game_info_list.querySelector(".buttons .continue");
 let quiz_box = document.querySelector(".quiz_box");
 let timmer = quiz_box.querySelector(".timer .timer_sec");
 let timeLine = quiz_box.querySelector("header .timer_line");
+let timeUp = quiz_box.querySelector("header .time_left");
 
 const option_list = document.querySelector(".option_list");
 
@@ -55,12 +56,14 @@ restart_quiz.onclick = ()=>{
     clearInterval(timmingLine);
     startTimeLine(widthValue);
     next_btn.style.display = "none";
+    timeUp.textContent = "Time Left";
 }
 
 quit_quiz.onclick = ()=>{
     window.location.reload();
 }
 
+//If player clicks nect button
 next_btn.onclick = ()=>{
     if (que_count < questions.length - 1){
         que_count++;
@@ -72,7 +75,10 @@ next_btn.onclick = ()=>{
         clearInterval(timmingLine);
         startTimeLine(widthValue);
         next_btn.style.display = "none";
+        timeUp.textContent = "Time Left";
     }else{
+        clearInterval(timming);
+        clearInterval(timmingLine);
         console.log("You have completed the quiz");
         showResultBox();
     }
@@ -162,6 +168,7 @@ function startTime(time){
         if (time < 0){
             clearInterval(timming);
             timmer.textContent = "00";
+            timeUp.textContent = "Time Up";
 
             let correctAnswer = questions[que_count].answer;
             let allOptions = option_list.children.length;
