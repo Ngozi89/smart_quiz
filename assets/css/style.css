@@ -194,7 +194,7 @@ body {
 
 /* Style Quiz questuin  and Answer section */
 .quiz_box .que_ans{
-    background: rgb(238, 10, 10);
+    background: red;
     width: 90%;
     height: 520px;
     margin-left: 20px;
@@ -267,7 +267,7 @@ body {
 }
 
 .total-question span {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 700;
     user-select: none;
     margin-top: 47px;
@@ -302,10 +302,10 @@ section .next_btn:hover {
     position: absolute;
     top: 50%;
     left: 47%;
-    width: 250px;
-    height: 250px;
-    background: rgb(238, 6, 6);
-    color: #fff;
+    width: 260px;
+    height: 290px;
+    background: #fff;
+    color: #252525;
     display: flex;
     border-radius: 5px;
     text-align: center;
@@ -320,17 +320,18 @@ section .next_btn:hover {
 
 .result_box .result_icon {
     font-size: 90px;
-    color: goldenrod;
+    color: #610369;
 }
 
 .result_box .complete_quiz {
-    font-size: 120%;
+    font-size: 100%;
     font-weight: 600;
+
 }
 
 .result_box .score_text span {
     display: flex;
-    font-size: 110%;
+    font-size: 90%;
     font-weight: 400;
 }
 
@@ -358,7 +359,8 @@ section .next_btn:hover {
 
 .result_box .buttons .continue {
     background: #000;
-    font-weight: 800;
+    color: #fff;
+    font-weight: 600;
     font-size: 80%;
 }
 
@@ -368,6 +370,8 @@ section .next_btn:hover {
 
 .result_box .buttons .exit {
     font-size: 80%;
+    background: #610369;
+    color: #fff;
 }
 
 .buttons .exit:hover {
@@ -378,42 +382,131 @@ section .next_btn:hover {
 @media screen and (min-width: 750px) {
     .start_game {
         width: 70%;
-        height: 580px;
+        height: 760px;
         color: white;
         margin-top: 110px;
         margin-left: 120px;
     }
 
-    .heading {
-        font-size: 40px;
+    .header h1 {
+        font-size: 50px;
+          margin-top: 30px;
+          margin-left: 170px;
+      }
+      
+      .header p {
+          font-size: 25px;
+          margin-left: 250px;
+      }
+
+    .heading2{
+        font-size: 140%;
+        margin-left: 125px;
     }
 
     .logo {
-        width: 70%;
-        height: 200px;
-        margin-top: 40px;
-        margin-left: 65px;
+        width: 90%;
+        height: 230px;
+        margin-top: 70px;
+        margin-left: 100px;
+    }
+
+    .start-btn{
+        font-size: 150%;
+        margin-left: 200px;
+        width: 40%;
+        height: 50px;
+    }
+
+    .game_info_list {
+        width: 75%;
+        height: 790px;
+        margin-top: 640px;
+        margin-left: 400px;
     }
     
-    .start-btn {
-        margin-left: 220px;
+    .game_info_list img {
+        margin-left:180px;
     }
+    
+    .game_info {
+        font-size: 140%;
+        margin: 30px;
+        padding: 1px;
+    }
+
+    /* Quiz section */
+    .quiz_box {
+        margin-left: 400px;
+        margin-top: 560px;
+        width: 80%;
+        height: 700px;
+
+    }
+
+    .quiz_box header .title {
+        font-size: 40px;
+    }
+
+    .quiz_box section .total-question span {
+        margin-bottom: 430px;
+    }
+
+    .quiz_box .que_ans {
+        width: 90%;
+        height: 700px;
+
+    }
+
+    .que_text {
+        font-size: 170%;
+        margin-left: 10px;
+    }
+
+    .que_ans .option_list .option {
+        margin-top: 20px;
+        font-size: 140%;
+    }
+    
+    /* Next question button */
+    section button {
+        font-size: 150%;
+        width: 30%;
+        height: 50px;
+        margin-right: 120px;
+        margin-bottom: 410px;
+    }
+
 
     .result_box {
         width: 60%;
-        height: 300px;
+        height: 470px;
         left: 50%;
-        top: 50%;
+        top: 65%;
     }
 
     .result_box .complete_quiz {
         font-size: 150%;
     }
 
+    .result_box .score_text span {
+        font-size: 140%;
+    }
     .result_box .buttons button {
-        width: 60%;
-        height: 65px;
-        font-size: 120%;
+        width: 110px;
+        height: 50px;
+    }
+
+    .result_box .buttons .continue {
+        font-size: 110%;
+    }
+    
+    .buttons .continue:hover {
+        background: #fff;
+    }
+    
+    .result_box .buttons .exit {
+        font-size: 110%;
     }
 }
 
@@ -421,7 +514,7 @@ section .next_btn:hover {
 @media screen and (min-width: 1200px) {
     .header h1 {
         margin-top: 20px;
-        margin-left: 650px;
+        margin-left: 570px;
     }
 
     .start_game {
@@ -462,8 +555,8 @@ section .next_btn:hover {
 
     .game_info_list {
         width: 62%;
-        height: 670px;
-        margin-top: 459px;
+        height: 690px;
+        margin-top: 463px;
         margin-left: 800px;
     }
     
@@ -500,7 +593,7 @@ section .next_btn:hover {
     }
 
     .quiz_box .que_ans {
-        height: 600px;
+        height: 615px;
     }
 
     .total-question span {
@@ -517,19 +610,20 @@ section .next_btn:hover {
         width: 20%;
         height: 50px;
         margin-right: 120px;
-        margin-bottom: 430px;
+        margin-bottom: 400px;
     }
 
     .result_box {
         top: 60%;
-        left: 49%;
-        width: 30%;
-        height: 320px;
+        left: 50%;
+        width: 40%;
+        height: 450px;
 
     }
 
     .result_box .buttons button {
         margin-top: 70px;
+        width: 120px;
         height: 40px;
     }
 }
