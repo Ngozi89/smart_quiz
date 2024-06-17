@@ -5,7 +5,7 @@ let exit_btn = game_info_list.querySelector(".buttons .exit");
 let continue_btn = game_info_list.querySelector(".buttons .continue");
 let quiz_box = document.querySelector(".quiz_box");
 let timmer = quiz_box.querySelector(".timer .timer_sec");
-let timeLine = quiz_box.querySelector("header .timer_line");
+let timeheaderLine = quiz_box.querySelector("header .time_line");
 let timeUp = quiz_box.querySelector("header .time_left");
 
 const option_list = document.querySelector(".option_list");
@@ -25,13 +25,13 @@ continue_btn.onclick = ()=> {
     showQuestions(0);
     queCounter(1);
     startTime(10);
-    startTimeLine(0);
+    startHeaderTimeLine(0);
 }
 
 let que_count = 0;
 let que_number = 1;
 let timming;
-let timmingLine;
+let headerLine;
 let timeValue = 10;
 let widthValue = 0;
 let playerScore = 0;
@@ -53,8 +53,8 @@ restart_quiz.onclick = ()=>{
     queCounter(que_number);
     clearInterval(timming);
     startTime(timeValue);
-    clearInterval(timmingLine);
-    startTimeLine(widthValue);
+    clearInterval(headerLine);
+    startHeaderTimeLine(widthValue);
     next_btn.style.display = "none";
     timeUp.textContent = "Time Left";
 }
@@ -72,13 +72,13 @@ next_btn.onclick = ()=>{
         queCounter(que_number);
         clearInterval(timming);
         startTime(timeValue);
-        clearInterval(timmingLine);
-        startTimeLine(widthValue);
+        clearInterval(headerLine);
+        startHeaderTimeLine(widthValue);
         next_btn.style.display = "none";
         timeUp.textContent = "Time Left";
     }else{
         clearInterval(timming);
-        clearInterval(timmingLine);
+        clearInterval(headerLine);
         console.log("You have completed the quiz");
         showResultBox();
     }
@@ -105,7 +105,7 @@ let crossIcon = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 function optionSelected(answer) {
     clearInterval(timming);
-    clearInterval(timmingLine);
+    clearInterval(headerLine);
     let userAnswer = answer.textContent;
     let correctAnswer = questions[que_count].answer;
     let allOptions = option_list.children.length;
@@ -187,13 +187,13 @@ function startTime(time){
     }
 }
 
-function startTimeLine(time){
-    timmingLine = setInterval(timer, 29);
+function startHeaderTimeLine(time){
+    headerLine = setInterval(timer, 20);
     function timer(){
         time += 1;
-        timeLine.style.width = time + "px";
-        if (time < 549) {
-            clearInterval(timmingLine);
+        timeheaderLine.style.width = time + "px";
+        if (time > 549) {
+            clearInterval(headerLine);
         }
     }
 }
