@@ -30,11 +30,11 @@ continue_btn.onclick = ()=> {
 
 let que_count = 0;
 let que_number = 1;
+let playerScore = 0;
 let timming;
 let headerLine;
 let timeValue = 10;
 let widthValue = 0;
-let playerScore = 0;
 
 const next_btn = quiz_box.querySelector(".next_btn");
 const result_box = document.querySelector(".result_box");
@@ -47,8 +47,8 @@ restart_quiz.onclick = ()=>{
     let que_count = 0;
     let que_number = 1;
     let timeValue = 10;
-    let widthValue = 0;
     let playerScore = 0;
+    let widthValue = 0;
     showQuestions(que_count);
     queCounter(que_number);
     clearInterval(timming);
@@ -137,7 +137,6 @@ function optionSelected(answer) {
 }
 
 function showResultBox(){
-    start_game.classList.remove("activeInfo");
     game_info_list.classList.remove("activeInfo"); //Hide quiz info box
     quiz_box.classList.remove("activeQuiz"); //Hide the quiz box
     result_box.classList.add("activeResult"); //Display Quiz result-box

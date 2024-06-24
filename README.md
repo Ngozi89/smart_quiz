@@ -40,33 +40,41 @@ The site is a fully responsive javascript game that will allow users to read que
 
 ### Smart quiz app Heading
 
-- Featured at the top of the page is the smart quiz app heading and is easy to see for the users.
-Upon viewing the page, the user will be able to see the name of the game and a start game button!
+- The start up page contains heading and a start game button. 
 
-![smart quiz heading](#)
+- Featured at the top of the page is the smart quiz app heading and is easy to see for the users.
+
+- Upon viewing the page, the user will be able to see the name of the game and a start game button! This is to fulfill the purpose of user story:
+
+ . As a first-time user I want to easily understand what the site main purpose is all about.
+
+![smart quiz start game](assets/images/start-quiz.png)
 
 ### The Game Area
 
-- The game have sections. The first section allows user to play game by clicking the start game button. Once clicked, the game rules will dispaly. At the game rule section, the user will be able to read the rules of the game and given an option button to choose if he or she wants to play the game or quit. If user choose contiune, the game section that dispalys the questions will show and at this point, user can not quit game until all questions are answered, while if user choose quit the game ends and take user back to You can start the game section. The last section is the result box that display when all questions are answered and it show how many questions the user got right and gives opportunity to play again or exit game. 
+- The game have sections. The first section allows user to play game by clicking the start game button. Once clicked, the game rules will dispaly. At the game rule section, the user will be able to read the rules of the game and given an option button to choose if he or she wants to play the game or quit. If user choose to contiune, the game section that dispalys the questions will show and at this point, user can not quit game until all questions are answered, while if user choose quit, the game ends and take user back to the start the game section. The last section is the result box that display result when all questions are answered and it show how many questions the user got right and gives opportunity to play again or exit game. This is to fulfill the purpose of user story:
 
-![#](#)
+.  As a first-time user I want to find the site interesting.
+![smart quiz game info](assets/images/game-info.png)
+![quiz questions](assets/images/questions.png)
 
-- The quiz game app have a clear information that tells the user how what to expect.
-- The user will have four answer options to choose from
+- The quiz game have a clear information that tells the users what to expect.
+- The user have four answer options to choose from
 - The user will be able to choose any answer he or she thinks or knows is correct.
 - Once the user chooses an answer, its irreversible.
 - If the user answer is wrong, the app will mark what the user choosed as well as mark the correct answer.
 - The user will have limited time to answer each question. once the user chooses his or her answer the timer stops. If the user can't choose an answer before the given time frame, the app will choose the correct answer automatically.
 - At the end of the game the user will see his or her score and can choose wheather to replay the game or quit.
-![Game quiz options](#)
-![App choose correct answer](#)
-![App choose correct answer](#)
+![Game quiz options](assets/images/option-list.png)
+![App choose correct answer](assets/images/user-correct-answer.png)
+![App choose correct answer](assets/images/user-wrong-answer.png)
 
 ### The Score Area
 
 - The uses will only see result at the end of the game.
+- Play again and Exit button
 
-![App choose correct answer](#)
+![Result](assets/images/result-box.png)
 
 - __The Score Area__
 
@@ -78,13 +86,13 @@ Upon viewing the page, the user will be able to see the name of the game and a s
 ### Validator Testing
 
 - HTML
-- No errors were returned when passing through the official [W3C validator](https://validator.w3.org/) ![Html validation](#)
+- No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/#textarea) ![Html validation](assets/images/html-test.png)
 - CSS
-- No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/) ![CSS validation](#)
+- No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator) ![CSS validation](assets/images/test-js.png)
 - JavaScript
-- No errors were found however, there was warning when passing through the official [Jshint validator](https://jigsaw.w3.org/css-validator/)
+- No errors were found however, there was warning when passing through the official [Jshint validator](https://jshint.com/) ![(Lighthouse)](assets/images/light-house.png)
 - Lighthouse
-- I used devtools to run it through lighthouse to test the accessibility, Perfomance and SEO ![(Lighthouse)](assets/images/lighthouse.png)
+- I used devtools to run it through lighthouse to test the accessibility, Perfomance and SEO ![(Lighthouse)](assets/images/light-house.png)
 
 ## Deployment
 

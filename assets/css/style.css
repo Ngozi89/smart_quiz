@@ -53,6 +53,8 @@ body {
 }
 
 .start-btn {
+    background: #07a3d3;
+    color: #fff;
     margin-left: 90px;
     margin-top: 50px;
     transition: all 0.3s ease;
@@ -379,7 +381,7 @@ section .next_btn:hover {
 }
 
 /* Media query for tablets and larger (750 px and up) */
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 750px){
     .start_game {
         width: 70%;
         height: 760px;
@@ -535,7 +537,7 @@ section .next_btn:hover {
 
     .header p {
         font-size: 120%;
-        margin-left: 690px;
+        margin-left: 650px;
     }
     
     .logo {
@@ -557,7 +559,7 @@ section .next_btn:hover {
         width: 62%;
         height: 690px;
         margin-top: 463px;
-        margin-left: 800px;
+        margin-left: 760px;
     }
     
     .game_info_list img {
@@ -580,7 +582,7 @@ section .next_btn:hover {
     .quiz_box {
         width: 68%;
         height: 800px;
-        margin-left: 830px;
+        margin-left: 800px;
         margin-top: 470px;
     }
 
@@ -606,7 +608,7 @@ section .next_btn:hover {
     }
     
     /* Next question button */
-    section button {
+    .play-again button {
         width: 20%;
         height: 50px;
         margin-right: 120px;
