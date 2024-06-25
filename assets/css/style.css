@@ -471,7 +471,7 @@ section .next_btn:hover {
     }
     
     /* Next question button */
-    section button {
+    .play_again button {
         font-size: 150%;
         width: 30%;
         height: 50px;
@@ -603,12 +603,12 @@ section .next_btn:hover {
     }
 
 
-    .quiz_box section .total-question span {
+    .quiz_box .play_again .total-question span {
         margin-bottom: 430px;
     }
     
     /* Next question button */
-    .play-again button {
+    .play_again button {
         width: 20%;
         height: 50px;
         margin-right: 120px;
